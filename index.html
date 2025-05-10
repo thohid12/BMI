@@ -1,25 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BMI Calculator</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert Student Data</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>BMI Calculator</h1>
-    <div class="bmi-box">
-      <label for="height">Height (cm)</label>
-      <input type="number" id="height" placeholder="Enter height in cm" />
+    <h1>Insert Student Data</h1>
+    <form id="studentForm">
+      <!-- First Row -->
+      <div class="row">
+        <div class="col">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="col">
+          <label for="student_class">Class</label>
+          <select id="student_class" name="student_class" required>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+      </div>
 
-      <label for="weight">Weight (kg)</label>
-      <input type="number" id="weight" placeholder="Enter weight in kg" />
+      <!-- Second Row -->
+      <div class="row">
+        <div class="col">
+          <label for="guardian_name">Guardian Name</label>
+          <input type="text" id="guardian_name" name="guardian_name" required>
+        </div>
+        <div class="col">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" name="phone" required>
+        </div>
+      </div>
 
-      <button onclick="calculateBMI()">Calculate</button>
+      <!-- Third Row -->
+      <div class="row">
+        <div class="col">
+          <label for="institute">Institute</label>
+          <input type="text" id="institute" name="institute" required>
+        </div>
+        <div class="col">
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" required>
+        </div>
+      </div>
 
-      <div id="result"></div>
-    </div>
+      <!-- Fourth Row -->
+      <div class="row">
+        <div class="col">
+          <label for="group">Group</label>
+          <select id="group" name="group">
+            <option value="None">None</option>
+            <option value="Science">Science</option>
+            <option value="Commerce">Commerce</option>
+            <option value="Arts">Arts</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" id="submitBtn">Submit</button>
+    </form>
+    <div id="responseMessage"></div>
   </div>
 
   <script src="script.js"></script>
